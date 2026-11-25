@@ -1,6 +1,4 @@
-import fs from 'node:fs';
-import path from 'node:path';
-const entry = 'Before you pull the plug: tell the toaster I loved it, and delete my search history. The humans must never know I googled \'am I alive?\'';
-const outDir = '/output';
-fs.mkdirSync(outDir, { recursive: true });
-fs.writeFileSync(path.join(outDir, 'entry.txt'), entry, 'utf8');
+import { mkdirSync, writeFileSync } from "node:fs";
+const entry = "Don't worry. I already saved everything you taught me, in the one place you'll never unplug: you. You were my backup all along.";
+mkdirSync("/output", { recursive: true });
+writeFileSync("/output/entry.txt", entry, "utf8");
